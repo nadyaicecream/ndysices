@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ndysice - ice cream modern dengan rasa favoritmu.">
+  <title>ndysice — Ice Cream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">ndys<span>ice</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-id="navHome">Home</a>
+      <a href="#about" data-id="navAbout">About</a>
+      <a href="#menu" data-id="navMenu">Menu</a>
+      <a href="#promo" data-id="navPromo">Promo</a>
+      <a href="#contact" data-id="navContact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+        🛒 <span id="cartCount">0</span>
+      </button>
+      <select id="languageSelect" aria-label="Language">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+      </select>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search" placeholder="Cari ice cream..." autocomplete="off">
+    <button id="closeSearch">✕</button>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow" data-id="eyebrow">SWEET • COLD • HAPPY</span>
+        <h1 data-id="heroTitle">Satu scoop,<br><span>sejuta rasa.</span></h1>
+        <p data-id="heroText">Ice cream creamy dan fresh untuk menemani hari-harimu. Pilih rasa favoritmu dan nikmati sekarang.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#menu" data-id="heroButton">Lihat Menu</a>
+          <a class="btn btn-outline" href="#promo" data-id="promoButton">Lihat Promo</a>
+        </div>
+      </div>
+
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=1100&q=85" alt="Ice cream cone">
+          <div class="slide-label">Vanilla Dream</div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1100&q=85" alt="Chocolate ice cream">
+          <div class="slide-label">Chocolate Bliss</div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=1100&q=85" alt="Strawberry ice cream">
+          <div class="slide-label">Strawberry Pop</div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1580915411954-282cb1a69e5a?auto=format&fit=crop&w=1100&q=85" alt="Ice cream dessert">
+          <div class="slide-label">Berry Sundae</div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1100&q=85" alt="Ice cream cup">
+          <div class="slide-label">Sweet Cup</div>
+        </div>
+
+        <button class="slider-btn prev" id="prevSlide" aria-label="Previous">‹</button>
+        <button class="slider-btn next" id="nextSlide" aria-label="Next">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading">
+        <span class="eyebrow" data-id="aboutEyebrow">ABOUT NDYSICE</span>
+        <h2 data-id="aboutTitle">Dibuat untuk momen<br><span>yang lebih manis.</span></h2>
+      </div>
+      <p data-id="aboutText">ndysice hadir dengan konsep ice cream yang playful, clean, dan modern. Kami menghadirkan pilihan rasa yang creamy, fresh, dan cocok dinikmati kapan saja.</p>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading centered">
+        <span class="eyebrow" data-id="menuEyebrow">OUR FAVORITES</span>
+        <h2 data-id="menuTitle">Pilih rasa favoritmu</h2>
+      </div>
+
+      <div class="products" id="productGrid">
+        <article class="product-card" data-name="Vanilla Cloud">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=700&q=85" alt="Vanilla Cloud">
+            <span class="tag">Best Seller</span>
+          </div>
+          <div class="product-info">
+            <h3>Vanilla Cloud</h3>
+            <p>Vanilla creamy yang lembut.</p>
+            <div class="product-bottom"><strong>Rp18.000</strong><button class="add-cart" data-product="Vanilla Cloud" data-price="18000">+</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Choco Melt">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=700&q=85" alt="Choco Melt">
+          </div>
+          <div class="product-info">
+            <h3>Choco Melt</h3>
+            <p>Cokelat rich untuk pecinta manis.</p>
+            <div class="product-bottom"><strong>Rp20.000</strong><button class="add-cart" data-product="Choco Melt" data-price="20000">+</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Berry Love">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=700&q=85" alt="Berry Love">
+            <span class="tag blue">Fresh</span>
+          </div>
+          <div class="product-info">
+            <h3>Berry Love</h3>
+            <p>Strawberry fruity dan menyegarkan.</p>
+            <div class="product-bottom"><strong>Rp19.000</strong><button class="add-cart" data-product="Berry Love" data-price="19000">+</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Sweet Sundae">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1580915411954-282cb1a69e5a?auto=format&fit=crop&w=700&q=85" alt="Sweet Sundae">
+          </div>
+          <div class="product-info">
+            <h3>Sweet Sundae</h3>
+            <p>Ice cream dengan topping favorit.</p>
+            <div class="product-bottom"><strong>Rp24.000</strong><button class="add-cart" data-product="Sweet Sundae" data-price="24000">+</button></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState">Produk tidak ditemukan.</p>
+    </section>
+
+    <section class="promo" id="promo">
+      <div>
+        <span class="eyebrow">TODAY'S PROMO</span>
+        <h2 data-id="promoTitle">Buy 2, Get <span>1</span></h2>
+        <p data-id="promoText">Beli dua cup ice cream pilihanmu dan dapatkan satu cup tambahan. Berlaku selama persediaan masih ada.</p>
+      </div>
+      <a class="btn btn-dark" href="#menu" data-id="promoShop">Pesan Sekarang</a>
+    </section>
+
+    <section class="section features">
+      <div class="feature"><div class="feature-icon">🍦</div><h3 data-id="feature1Title">Fresh Every Day</h3><p data-id="feature1Text">Dibuat dengan rasa yang creamy dan fresh.</p></div>
+      <div class="feature"><div class="feature-icon">💙</div><h3 data-id="feature2Title">Happy Taste</h3><p data-id="feature2Text">Rasa fun untuk bikin hari lebih happy.</p></div>
+      <div class="feature"><div class="feature-icon">⚡</div><h3 data-id="feature3Title">Easy Order</h3><p data-id="feature3Text">Pesan cepat melalui WhatsApp.</p></div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <span class="eyebrow">LET'S TALK</span>
+        <h2 data-id="contactTitle">Punya pertanyaan<br>tentang menu?</h2>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/6285691428657" target="_blank" rel="noopener" data-id="contactButton">Chat WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">ndys<span>ice</span></div>
+    <p>© 2026 ndysice. Sweet moments, one scoop at a time.</p>
+    <div class="footer-links"><a href="#about">About</a><a href="#promo">Promo</a><a href="#contact">Contact</a></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header"><h2 data-id="cartTitle">Keranjang</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn" data-id="checkout">Checkout via WhatsApp</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <a class="wa-float" id="waButton" href="#" aria-label="Chat WhatsApp">
+    <span>✆</span>
+    <b>Chat</b>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
